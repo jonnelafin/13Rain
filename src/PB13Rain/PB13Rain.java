@@ -24,12 +24,13 @@
 package PB13Rain;
 
 import JFUtils.dVector;
+import PB13Rain.Player.player;
 import PBEngine.*;
 import java.awt.Color;
 
 /**
  *
- * @author elias
+ * @author Elias Eskelinen <elias.eskelinen@protonmail.com>
  */
 public class PB13Rain extends JFUtils.InputActivated{
     public String lastFile = null;
@@ -66,14 +67,15 @@ public class PB13Rain extends JFUtils.InputActivated{
         //k.Logic.input = ourInput;
         
         
-        k.Logic.abright = true;
+        //k.Logic.abright = true;
+        k.world_friction_multiplier = 0.1;
         k.Logic.Vrenderer.camMode = 1;
-        k.Logic.Vrenderer.drawGrid = true;
-        k.Logic.Vrenderer.gridColor = new Color(20, 20, 20);
-        k.Logic.overrideRayBG = Color.WHITE;
+        //k.Logic.Vrenderer.drawGrid = true;
+        //k.Logic.Vrenderer.gridColor = new Color(20, 20, 20);
+        k.Logic.overrideRayBG = new Color(0, 20, 10);
         
         //add player
-            p = new Player(25, 5, 1, "player1", "█", 1F, Color.black, 1, k);
+            p = new player(25, 5, 1, "player1", "█", 1F, Color.black, 1, k);
             gameObject torso = new gameObject(25, 5, 1, "player1_torso", "T", 1F, Color.red, 2, k);
             gameObject torso2 = new gameObject(25, 5, 1, "player1_torso2", "T", 1F, Color.red, 3, k);
             //gameObject torso3 = new gameObject(25, 5, 1, "player1_torso2", "T", 1F, Color.red, 3, ref);

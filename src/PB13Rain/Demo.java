@@ -25,7 +25,7 @@ package PB13Rain;
 
 /**
  *
- * @author elias
+ * @author Elias Eskelinen <elias.eskelinen@protonmail.com>
  */
 public class Demo {
     public static void main(String[] args) {
